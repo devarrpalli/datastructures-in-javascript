@@ -1,3 +1,5 @@
+'use strict'
+
 function Node(data) {
 	this.val = data;
 	this.next = null;
@@ -78,13 +80,13 @@ SinglyLinkedList.prototype.search = function(data) {
 SinglyLinkedList.prototype.length = function() {
 	var curr = this.head;
 
-	var cnt = 0;
+	var numOfNodes = 0;
 	while (curr !== null) {
-		cnt++;
+		numOfNodes++;
 		curr = curr.next;
 	}
 
-	return cnt;
+	return numOfNodes;
 }
 
 SinglyLinkedList.prototype.print = function() {
